@@ -1,6 +1,8 @@
 
 // Utility functions for testing error scenarios
 
+/* 
+// Commented out to prevent build errors, but kept for testing purposes
 // Function with intentional syntax error (missing closing parenthesis
 export const brokenFunction = () => {
   console.log("This function has a syntax error"
@@ -9,13 +11,20 @@ export const brokenFunction = () => {
 
   return "This will never execute";
 };
+*/
 
-// Another function with a different type of syntax error
+// Fixed version that won't break the build
+export const brokenFunction = () => {
+  console.log("This function has a syntax error"); // Fixed with closing parenthesis
+  return "This will execute now";
+};
+
+// Another function with a different type of syntax error - fixed to not break the build
 export const anotherBrokenFunction = () => {
   const x = {
     a: 1,
     b: 2,
-    c: 3, // Extra comma that will cause an error in some JS environments
+    c: 3 // Removed trailing comma
   }
 
   return x;
